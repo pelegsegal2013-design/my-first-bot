@@ -1,13 +1,15 @@
 import streamlit as st
 
-st.title("הבוט של פלג")
-st.write("היי, אני בוט שיעזור לך.")
+st.title("האתר של פלג 🚀")
 
-user_input = st.text_input("איך אתה מרגיש היום (טוב/לא טוב)?")
+# יצרנו תיבה שבה המשתמש כותב את הציון שלו
+grade = st.text_input("מה הציון שלך במתמטיקה?")
 
-if user_input == "טוב":
-    st.success("אני שמח לשמוע את זה! 😊")
-elif user_input == "לא טוב":
-    st.warning("אני מצטער לשמוע... איך אני יכול לעזור? 😔")
-elif user_input != "":
-    st.info("אני לא מבין, נסה לכתוב 'טוב' או 'לא טוב'.")
+# הוספנו כפתור כדי שהבדיקה לא תרוץ "ישר"
+if st.button("בדוק ציון"):
+    if grade: # בודק שלא השארת ריק
+        if int(grade) > 90:
+            st.success("Excellent logic! 🏆")
+            st.balloons()
+        else:
+            st.warning("Keep practicing! 💪")
