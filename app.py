@@ -13,3 +13,5 @@ if st.button("בדוק ציון"):
             st.balloons()
         else:
             st.warning("Keep practicing! 💪")
+else:
+    st.error("תרשום את הציון שלך לא משהו אחר!")
