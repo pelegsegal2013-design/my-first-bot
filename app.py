@@ -10,7 +10,7 @@ if st.button("בדוק ציון"):
     if grade: # בודק שלא השארת ריק
         if int(grade) > 90:
             st.success("Excellent logic! 🏆")
-            st.balloons()
+            st.disco()
         else:
             st.warning("Keep practicing! 💪")
 else:
