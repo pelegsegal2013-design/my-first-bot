@@ -60,7 +60,7 @@ st.markdown("""
 if st.button("נתח את מצבי"):
     if hours.isdigit():
         h = int(hours)
-        if h > 5:
+        if h > 4:
             st.error(f"אחי, {h} שעות ב-{game} זה מוגזם! לך תבעט קצת בכדור בחוץ ⚽")
         elif h > 2:
             st.warning(f"אתה בדרך להיות פרו ב-{game}, אבל אל תשכח לאכול!")
