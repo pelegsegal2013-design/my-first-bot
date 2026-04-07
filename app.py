@@ -62,7 +62,7 @@ if st.button("נתח את מצבי"):
         h = int(hours)
         if h > 5:
             st.error(f"אחי, {h} שעות ב-{game} זה מוגזם! לך תבעט קצת בכדור בחוץ ⚽")
-        elif h > 2,3:
+        elif h > 2:
             st.warning(f"אתה בדרך להיות פרו ב-{game}, אבל אל תשכח לאכול!")
         else:
             st.success(f"מצב מעולה, {game} זה אחלה משחק! יש לך עוד זמן לשחק.")
