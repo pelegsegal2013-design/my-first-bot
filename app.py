@@ -43,7 +43,7 @@ with col1:
     hours = st.text_input("", label_visibility="collapsed")
 with col2:
     # הצגת התמונה המתאימה בצד
-    st.image(images[game], width=150)
+    st.image(images[game], width=300)
 
 # 4. עיצוב הכפתור הכתום
 st.markdown("""
@@ -63,7 +63,7 @@ if st.button("נתח את מצבי"):
         if h > 3:
             st.error(f"-{game} זה מוגזם! לך תגע בדשא🎍 אתה משחק מלא זמן ב")
         elif h > 2:
-            st.warning(f"אתה בדרך להיות פרו ב-{game}, אבל אל תשכח לאכול!")
+            st.warning(f"{game}אבל אל תשכח לאכול אתה בדרך להיות פרו ב")
         else:
             st.success(f"מצב מעולה, {game} זה אחלה משחק! יש לך עוד זמן לשחק.")
             st.balloons()
