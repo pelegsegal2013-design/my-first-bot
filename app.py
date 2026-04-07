@@ -61,7 +61,7 @@ if st.button("נתח את מצבי"):
     if hours.isdigit():
         h = int(hours)
         if h > 3:
-            st.error(f"-{game} שעות ב {h} זה מוגזם! לך תגע בדשא אתה משחק 🎍")
+            st.error(f"-{game} שעות זה מוגזם! לך תגע בדשא🎍 אתה משחק ב {h}")
         elif h > 2:
             st.warning(f"אתה בדרך להיות פרו ב-{game}, אבל אל תשכח לאכול!")
         else:
