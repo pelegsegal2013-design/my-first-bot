@@ -5,7 +5,7 @@ st.markdown("<h1 style='text-align: center; color: purple;'>בוט הגיימי�
 
 # 2. שאלה ראשונה בירוק
 st.markdown("<p style='color: green; font-weight: bold;'>איזה משחק אתה הכי אוהב?</p>", unsafe_allow_html=True)
-game = st.selectbox("", ["מיינקראפט", "רובלוקס", "פורטנייט"], label_visibility="collapsed")
+game = st.selectbox("", ["מיינקראפט", "רובלוקס", "פורטנייט" ,"אוור וואצ ,], label_visibility="collapsed")
 
 # 3. שאלה שנייה צבעונית (נשתמש בכחול למשל)
 st.markdown("<p style='color: #0080ff; font-weight: bold;'>כמה שעות שיחקת היום?</p>", unsafe_allow_html=True)
