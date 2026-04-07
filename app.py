@@ -43,7 +43,7 @@ with col1:
     hours = st.text_input("", label_visibility="collapsed")
 with col2:
     # הצגת התמונה המתאימה בצד
-    st.image(images[game], width=300)
+    st.image(images[game], width=1000)
 
 # 4. עיצוב הכפתור הכתום
 st.markdown("""
