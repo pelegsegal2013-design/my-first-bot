@@ -1,12 +1,25 @@
 import streamlit as st
 
-st.title("בוט הגיימינג של :purple[פלג] 🎮")
+# 1. כותרת ראשית בסגול (בלי המילה purple רשומה)
+st.markdown("<h1 style='text-align: center; color: purple;'>בוט הגיימינג של פלג 🎮</h1>", unsafe_allow_html=True)
 
-# 1. הבוט שואל שאלה
-game = st.selectbox("איזה משחק אתה הכי אוהב?", ["מיינקראפט", "רובלוקס", "פורטנייט"])
-hours = st.text_input("כמה שעות שיחקת היום?")
+# 2. שאלה ראשונה בירוק
+st.markdown("<p style='color: green; font-weight: bold;'>איזה משחק אתה הכי אוהב?</p>", unsafe_allow_html=True)
+game = st.selectbox("", ["מיינקראפט", "רובלוקס", "פורטנייט"], label_visibility="collapsed")
 
-# 2. הבוט מבצע לוגיקה כשלוחצים על הכפתור
+# 3. שאלה שנייה צבעונית (נשתמש בכחול למשל)
+st.markdown("<p style='color: #0080ff; font-weight: bold;'>כמה שעות שיחקת היום?</p>", unsafe_allow_html=True)
+hours = st.text_input("", label_visibility="collapsed")
+
+# 4. כפתור כתום (ב-Streamlit אי אפשר לצבוע רק את הכפתור בקלות, אז נשים טקסט כתום מעליו או נשתמש בטריק)
+st.markdown("""
+    <style>
+    div.stButton > button:first-child {
+        background-color: orange;
+        color: white;
+    }
+    </style>""", unsafe_allow_html=True)
+
 if st.button("נתח את מצבי"):
     if hours.isdigit():
         h = int(hours)
@@ -18,4 +31,4 @@ if st.button("נתח את מצבי"):
             st.success("מצב מעולה, יש לך עוד זמן לשחק!")
             st.balloons()
     else:
-        st.write("תכתוב מספר שעות, אל תנסה לעבוד על הבוט!")
+        st.error("תרשום את הציון שלך לא משהו אחר!")
