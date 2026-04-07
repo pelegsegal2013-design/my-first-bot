@@ -13,5 +13,4 @@ if st.button("בדוק ציון"):
             st.disco()
         else:
             st.warning("Keep practicing! 💪")
-else:
-    st.error("תרשום את הציון שלך לא משהו אחר!")
+    st.title("תרשום את הציון שלך לא משהו אחר!")
